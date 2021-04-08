@@ -1,0 +1,58 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Online Calculator</title>
+    <!-- <link rel="stylesheet" href="deafult.css"> -->
+    <link id="style" rel="stylesheet" href="default.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300;400&display=swap" rel="stylesheet">
+    <script src="calculate.js"></script>
+</head>
+<body>
+    <label class="switch">
+        <input type="checkbox" onclick="toggleDark()">
+        <span class="slider round">DARK MODE</span>
+      </label>
+    <div class="calculator">
+        <div class="history">
+            <p id="history"></p>
+        </div>
+        <input id="result" type="text">
+   
+        <table>
+           <tr>
+               <td><button id="clear" class="button" onclick="clearInput()">C</button></td>
+               <td><button class="operator" onclick="negate()">+/-</button></td>
+               <td><button class="operator" onclick="percent()">%</button></td>
+               <td><button class="operator" onclick="insertOp('/')">&#247;</button></td>
+            </tr>
+            <tr>
+                <td><button class="button" onclick="insertNum(7)">7</button></td>
+                <td><button class="button" onclick="insertNum(8)">8</button></td>
+                <td><button class="button" onclick="insertNum(9)">9</button></td>
+                <td><button class="operator" onclick="insertOp('x')">&#215;</button></td>
+            </tr>
+            <tr>
+                <td><button class="button" onclick="insertNum(4)">4</button></td>
+                <td><button class="button" onclick="insertNum(5)">5</button></td>
+                <td><button class="button" onclick="insertNum(6)">6</button></td>
+                <td><button class="operator" onclick="insertOp('-')">&#8722;</button></td>
+            </tr>
+            <tr>
+                <td><button class="button" onclick="insertNum(1)">1</button></td>
+                <td><button class="button" onclick="insertNum(2)">2</button></td>
+                <td><button class="button" onclick="insertNum(3)">3</button></td>
+                <td><button class="operator" onclick="insertOp('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button id="dot" class="button" onclick="insertNum('.')">.</button></td>
+                <td><button class="button" onclick="insertNum(0)">0</button></td>
+                <td><button id="back" class="button" onclick="back()">&#8592;</button></td>
+                <td><button class="button" id="equals" onclick="solve()">=</button></td>
+
+            </tr>
+
+        </table>
+    </div>
+</body>
+</html>
